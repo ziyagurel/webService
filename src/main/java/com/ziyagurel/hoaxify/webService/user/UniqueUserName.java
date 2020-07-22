@@ -19,7 +19,7 @@ import javax.validation.Payload;
 @Constraint(validatedBy = {UniqueUsernameValidator.class })
 public @interface UniqueUserName {
 	
-	String message() default "Username must not be null";
+	String message() default "{ziyagurel.hoaxify.validation.constraint.UniqueUserName.message}";
 
 	Class<?>[] groups() default { };
 

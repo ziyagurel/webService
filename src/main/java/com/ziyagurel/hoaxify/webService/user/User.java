@@ -18,15 +18,15 @@ public class User {
 	@GeneratedValue
 	private long id;
 	
-	@NotNull
+	@NotNull(message="{ziyagurel.hoaxify.validation.constraint.username.NotNull.message}")
 	@Size(min= 4, max=255)
 	@UniqueUserName
 	private String username;
-	@NotNull
+	@NotNull(message="{ziyagurel.hoaxify.validation.constraint.displayName.NotNull.message}")
 	@Size(min= 4, max=255)
 	private String displayName;
 	@NotNull
 	@Size(min=4, max=255)
-	@Pattern(regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).*$")
+	@Pattern(regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).*$", message="{ziyagurel.hoaxify.validation.constraint.password.Pattern.message}")
 	private String password;
 }
